@@ -5,10 +5,9 @@
 using namespace std;
 
 int main(){
-	float denominations[] = {20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1};
+	float denominations[] = {20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1}; //given in "grosze"
 	int amount[14];
 	float restZl;
-	
 	for (int i=0; i<14; i++){
 		amount[i]=0;
 	}
@@ -16,12 +15,11 @@ int main(){
 	cout<<"How much cash is to be given back: ";
 	cin>>restZl;
 
-	float newRestZl = 100 * restZl;
-	int rest = int(newRestZl);
+	int rest = int (restZl * 100);
 	int a;
 	int i=0;
 	
-	while (rest>0 ){
+	while (rest>0){
 		a = rest / denominations[i];
 		rest -= a * denominations[i];
 		amount[i]=a;
