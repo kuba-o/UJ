@@ -15,7 +15,6 @@ int main(){
 	tab[1] = 1;
 	for (int i=2; i<=n; i++){
 		tab[i] = tab[i-1] + tab[i-2];
-		cout<<"tab[i]: "<<tab[i]<<"***"<<i<<endl;
 	}
 	cout<<"Wynik: "<<tab[n-1]<<endl;
 
